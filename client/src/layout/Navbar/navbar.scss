@@ -1,0 +1,163 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@mixin Myflex() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include Myflex();
+
+nav {
+    background-color: #fff;
+    z-index: 999;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 30px 130px;
+    position: relative;
+    // position: fixed;
+    width: 100%;
+
+    .navbarLeftBox {
+        @include Myflex();
+    }
+
+    .navbarMiddleBox {
+        gap: 30px;
+        font-size: 20px;
+        @include Myflex();
+
+        .link {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+
+        }
+
+        .link:hover {
+            color: blue;
+        }
+    }
+
+    .navbarRightBox {
+        display: flex;
+        gap: 13px;
+
+        button {
+            background-color: transparent;
+            font-size: 20px;
+            @include Myflex();
+            border: none;
+            cursor: pointer;
+
+        }
+
+        .buyBtn {
+            font-size: 13px;
+            padding: 14px 40px;
+            border-radius: 30px;
+            border: 1px solid rgba(128, 128, 128, 0.616);
+            height: 50px;
+            transition: 0.5s;
+        }
+        .buyBtn:hover{
+            border: 1px solid blue;
+            transition: 0.5s;
+
+        }
+    }
+
+    .hiddenMenuBox {
+        display: none;
+        font-size: 30px;
+        color: blue;
+        cursor: pointer;
+    }
+
+    .respNavbar {
+        background-color: white;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+padding: 0px 0px 20px;
+        ul {
+            list-style: none;
+            padding: 20px;
+            text-decoration: none;
+            color: white;
+            
+            li {
+              border-bottom: 1px solid rgba(128, 128, 128, 0.616);
+                padding:10px 20px 10px 0px;
+
+           .link{
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+           }
+           .link:hover{
+            color: blue;
+           }
+            }
+        }
+        .respBtnsBox{
+            display: flex;
+            gap: 5px;
+            padding: 0px 15px;
+            margin-top: -30px;
+            button{
+                padding: 6px;
+                font-size: 20px;
+                @include Myflex();
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+            }
+            .buyBtn{
+              padding: 7px 30px;
+              border-radius: 30px;
+              border: 1px solid rgba(128, 128, 128, 0.616);
+              font-size: 15px;
+            }
+        }
+    }
+    .openNavbar{
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 1096px) {
+    nav {
+        gap: 10px;
+        padding: 30px 20px;
+    }
+}
+
+@media only screen and (max-width: 845px) {
+    nav {
+        padding: 30px 40px;
+
+        .navbarMiddleBox {
+            display: none;
+        }
+
+        .navbarRightBox {
+            display: none;
+        }
+
+        .hiddenMenuBox {
+            @include Myflex();
+        }
+    }
+
+
+}

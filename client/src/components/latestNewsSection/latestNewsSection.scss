@@ -1,0 +1,126 @@
+@mixin Myflex() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include Myflex();
+
+
+
+#latestNewsSection {
+    padding: 30px 160px;
+
+    .latestNewsSectionUpBox {
+        height: 27%;
+        padding: 0px 0px 20px 0px;
+
+        p {
+            font-size: 17px;
+            color: gray;
+        }
+
+        h1 {
+            font-size: 40px;
+            display: flex;
+            gap: 10px;
+
+            p {
+                font-size: 40px;
+                color: black;
+                border-bottom: 2px solid blue;
+            }
+        }
+    }
+
+    .latestNewsSectionDownBox {
+        @include Myflex();
+        align-items: center;
+        justify-content: center;
+        gap: 90px;
+        flex-wrap: wrap;
+
+        .latestCartBox {
+            height: 100%;
+            width: 360px;
+
+            .latestImgBox {
+                @include Myflex();
+
+                img {
+                    width: 100%;
+                    height: 220px;
+                }
+            }
+
+            .latestTextBox {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                .typeBox {
+                    @include Myflex();
+                    justify-content: start;
+                    gap: 20px;
+                    color: gray;
+
+                    p {
+                        font-size: 15px;
+                    }
+
+                    div {
+                        @include Myflex();
+
+                    }
+                }
+
+                p {
+                    font-size: 24px;
+                }
+
+                p:hover {
+                    color: blue;
+                    cursor: pointer;
+                }
+
+                span {
+                    font-size: 16px;
+                    color: gray;
+                }
+
+                .latestTextBtnBox {
+                    @include Myflex();
+                    justify-content: start;
+
+                    .arrow {
+                        transform: translate(0px);
+                        transition: 1s;
+                    }
+                }
+
+                .latestTextBtnBox:hover {
+                    color: blue;
+                    cursor: pointer;
+
+                    .arrow {
+                        transform: translate(10px);
+                        transition: 1s;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1400px) {
+    #latestNewsSection {
+        padding: 30px 10px;
+    
+        .latestNewsSectionUpBox {
+            // background-color: red;x
+            @include Myflex();
+            flex-direction: column;
+            }
+        }
+       
+    }

@@ -1,0 +1,181 @@
+@mixin Myflex() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include Myflex();
+#shopIsFunSection{
+    @include Myflex();
+    display: flex;
+    position: relative;
+    padding: 40px 0px 40px 0px ;
+      .notMeanBox{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: blue;
+        width: 30%;
+        height: 100%;
+        z-index: 0;
+      }
+      .shopIsFunSectionBox{
+        z-index: 33;
+      
+      }
+      
+    .shopTextBox{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0px 20px;
+        p{
+            font-size: 37px;
+            color: rgb(83, 80, 80);
+        }
+        h1{
+            font-size: 60px;
+            max-width: 600px;
+        }
+        span{
+            max-width: 500px;
+            font-size: 15px;
+            color: gray;
+        }
+        button{
+            margin-top: 20px;
+            width: 170px;
+            padding: 18px 0px;
+            border-radius: 45px;
+            border: none;
+            color: white;
+            background-color: blue;
+            cursor: pointer;
+        }
+    }
+        
+    }
+    @media only screen and (max-width: 909px) {
+        #shopIsFunSection{
+              .shopIsFunSectionBox{
+                img{
+                    max-width: 300px;
+              }
+              }
+            .shopTextBox{
+        padding: 20px;
+background-color: rgb(212, 206, 206);
+                p{
+                    font-size: 25px;
+                }
+                h1{
+                    font-size: 30px;
+                    max-width: 300px;
+                }
+                button{
+                    width: 150px;
+                }
+            }
+            }
+    }
+    @media only screen and (max-width: 514px) {
+        #shopIsFunSection{
+            padding: 40px 0px 40px 50px ;
+              .shopIsFunSectionBox{
+                img{
+                    display: none;
+              }
+              }
+            .shopTextBox{
+                z-index: 2;
+                h1{
+                    max-width: 600px;
+                }
+                span{
+                    max-width: 500px;
+                    font-size: 15px;
+                    color: gray;
+                }
+                button{
+                    width: 100px;
+                    margin-top: 20px;
+                    padding: 10px 0px;
+                    font-size: 13px;
+                }
+            }
+                
+            }
+
+
+    }
+// @media only screen and (max-width: 1054px) {
+//     #shopIsFunSection{
+//         background-color: red;
+//         @include Myflex();
+//         align-items: end;
+//         display: flex;
+//         .shopIsFunSectionBox{
+// display: flex;
+// justify-content: end;
+//     img{
+//         max-width: 90%;
+//     }
+//         }
+//         .shopTextBox{
+//             background-color: green;
+//             width: 40%;
+//         }
+       
+//     }
+
+
+// }
+// #shopIsFunSection{
+//     display: flex;
+//     @include Myflex();
+//     .shopIsFunSectionLeftBox{
+//         background-color: blue;
+//         padding: 60px 0px 0px 200px;
+//         @include Myflex();
+//         .left{
+//             background-color: orange;
+//             height: 100vh;
+//             width: 500px;
+//         }
+//         .right{
+//             background-color: teal;
+//         }
+//         img{
+//             margin-right: -100px;
+//             z-index: 1;
+//         }
+//     }
+//     .shopIsFunSectionLRightBox{
+//         display: flex;
+//         flex-direction: column;
+//         padding: 150px;
+//         gap: 20px;
+//         p{
+//             font-size: 37px;
+//             color: rgb(83, 80, 80);
+//         }
+//         h1{
+//             font-size: 60px;
+//         }
+//         span{
+//             max-width: 500px;
+//             font-size: 15px;
+//             color: gray;
+//         }
+//         button{
+//             margin-top: 20px;
+//             width: 170px;
+//             padding: 18px 0px;
+//             border-radius: 45px;
+//             border: none;
+//             color: white;
+//             background-color: blue;
+//             cursor: pointer;
+//         }
+//     }
+// }

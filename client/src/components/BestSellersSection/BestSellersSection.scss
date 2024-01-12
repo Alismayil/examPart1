@@ -1,0 +1,165 @@
+@mixin Myflex() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include Myflex();
+
+#bestSellersSection {
+    padding: 30px 160px;
+.bestSellersSectionUpBox {
+    height: 27%;
+    padding: 0px 0px 40px 20px;
+
+    p {
+        font-size: 17px;
+        color: gray;
+    }
+
+    h1 {
+        font-size: 40px;
+        display: flex;
+        gap: 10px;
+
+        p {
+            font-size: 40px;
+            color: black;
+            border-bottom: 2px solid blue;
+        }
+    }
+}
+    .bestSellersSectionDownBox {
+        .swiper-slide {
+            @include Myflex();
+    
+            .bestSellerSliderBox {
+    
+                .bestSellerImageBox {
+                    position: relative;
+                    @include Myflex();
+    
+                    .bestSellerHoverBox {
+                        background-color: rgba(255, 255, 255, 0.137);
+                        width: 100%;
+                        height: 30%;
+                        position: absolute;
+                        bottom: 0;
+                        opacity: 0;
+                        @include Myflex();
+                        gap: 10px;
+                        transform: translateY(50px);
+                        transition: 0.1s;
+                        cursor: pointer;
+    
+                        button {
+                            padding: 10px;
+                            cursor: pointer;
+                            @include Myflex();
+                            background-color: blue;
+                            color: white;
+                            border: none;
+                            font-size: 20px
+                        }
+                    }
+                }
+    
+    
+    
+                .bestSellerTextBox {
+                    @include Myflex();
+                    flex-direction: column;
+                    gap: 10px;
+                    p{
+                        color: gray;
+                    }
+                }
+            }
+    
+            .bestSellerSliderBox:hover {
+                .bestSellerHoverBox {
+                    opacity: 1;
+                    transform: translateY(-10px);
+                    transition: 0.3s;
+    
+    
+                }
+            }
+        }
+    }
+
+    .swiper {
+        width: 100%;
+    }
+
+    .swiper-slide {
+        @include Myflex();
+
+        .bestSellerSliderBox {
+
+            .bestSellerImageBox {
+                position: relative;
+                @include Myflex();
+
+                .bestSellerHoverBox {
+                    background-color: rgba(255, 255, 255, 0.137);
+                    width: 100%;
+                    height: 30%;
+                    position: absolute;
+                    bottom: 0;
+                    opacity: 0;
+                    @include Myflex();
+                    gap: 10px;
+                    transform: translateY(50px);
+                    transition: 0.1s;
+                    cursor: pointer;
+
+                    button {
+                        padding: 10px;
+                        cursor: pointer;
+                        @include Myflex();
+                        background-color: blue;
+                        color: white;
+                        border: none;
+                        font-size: 20px
+                    }
+                }
+            }
+
+
+
+            .bestSellerTextBox {
+                margin-top: 10px;
+                @include Myflex();
+                flex-direction: column;
+                gap: 10px;
+                p{
+                    color: gray;
+                }
+            }
+        }
+
+        .bestSellerSliderBox:hover {
+            .bestSellerHoverBox {
+                opacity: 1;
+                transform: translateY(-10px);
+                transition: 0.3s;
+
+
+            }
+        }
+    }
+
+}
+@media only screen and (max-width: 1400px) {
+    #bestSellersSection {
+        padding: 30px 10px;
+    
+        .bestSellersSectionUpBox {
+            // background-color: red;x
+            @include Myflex();
+            flex-direction: column;
+            }
+        }
+       
+    }

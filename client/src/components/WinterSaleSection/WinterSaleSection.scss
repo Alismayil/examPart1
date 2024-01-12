@@ -1,0 +1,53 @@
+
+@mixin Myflex() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include Myflex();
+
+#winterSaleSection{
+   background-image: url(https://preview.colorlib.com/theme/aroma/img/home/parallax-bg.png.webp);
+//    background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+    height: 57vh;
+    display: flex;
+    .winterSaleSectionLeftBox{
+        width: 60%;
+        @include Myflex();
+        flex-direction: column;
+        gap: 10px;
+        h1{
+            font-size: 40px;
+        }
+        p{
+            font-size: 30px;
+            font-weight: 600;
+        }
+        span{
+            margin-top: 20px;
+            color: gray;
+        }
+        button{
+            margin-top: 20px;
+            width: 170px;
+            padding: 18px 0px;
+            border-radius: 45px;
+            border: none;
+            color: white;
+            background-color: blue;
+            cursor: pointer;
+        }
+    }
+   
+}
+@media only screen and (max-width: 850px) {
+
+    #winterSaleSection{
+         .winterSaleSectionLeftBox{
+             width: 100%;
+         }
+     }
+}
